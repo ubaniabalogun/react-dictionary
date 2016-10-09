@@ -5,7 +5,7 @@ var axios = require('axios');
 var secrets = require('./secrets');
 var utils = require('./utils');
 
-var wordnikBase = "http://api.wordnik.com/v4"
+var wordnikBase = "https://api.wordnik.com/v4"
 var wordEp = "word.json";
 var wordsEp = "words.json";
 var definitionsResource = "definitions";
