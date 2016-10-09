@@ -5,7 +5,7 @@ require('../main.css')
 function Button(props){
   return (
     <button className="get-word__button" type="button" onClick={props.onSubmitWord}>
-      <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
+      <span className="glyphicon glyphicon-search get-word__button-icon" aria-hidden="true"></span>
     </button>
   )
 }

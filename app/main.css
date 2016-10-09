@@ -34,6 +34,12 @@
   outline: none;
 }
 
+.get-word__button-icon {
+  font-size: xx-large;
+  color: #3c7bbe;
+  vertical-align: middle;
+}
+
 .loading-wrapper {
   text-align: center;
 }
@@ -72,8 +78,8 @@
 }
 
 .audio__button {
-  width: 40px;
-  height: 40px;
+  font-size: xx-large;
+  color: white;
 }
 
 .definition__list {

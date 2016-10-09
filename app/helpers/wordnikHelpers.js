@@ -13,10 +13,6 @@ var wodResource = "wordOfTheDay"
 var audioResource = "audio";
 var apiKey = secrets.wordnikApiKey;
 
-
-
-
-
 function getQueryParams(params){
   params["api_key"] = apiKey;
   var pairs =  Object.keys(params).map(function(key){

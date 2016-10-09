@@ -30,7 +30,7 @@ function WordAudio(props){
     <div className="audio-wrapper">
       <audio id={props.id} src={soundEffect.fileUrl || 'https://www.myinstants.com/media/sounds/sadtrombone.swf.mp3'}>
       </audio>
-      <img src="../app/images/speaker.svg" className="audio__button" onClick={play}/>
+      <span className="glyphicon glyphicon-volume-up audio__button" onClick={play}></span>
     </div>
   )
 }
