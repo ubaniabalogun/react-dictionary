@@ -1,0 +1,33 @@
+var React = require('react');
+var Definitions = require('../components/Definitions');
+var wordnikHelpers = require('../helpers/wordnikHelpers');
+
+
+var DefinitionsContainer = React.createClass({
+  getInitialState: function(){
+    return {
+      isLoading: true,
+      info: {}
+    }
+  },
+  componentDidMount: function(){
+    var word = this.props.params.word;
+    wordnikHelpers.getWordInfo(word).then(function(info){
+      this.setState({
+        isLoading: false,
+        info: info
+      })
+    }.bind(this));
+  },
+  render: function(){
+    return(
+      <Definitions
+        word={this.props.params.word}
+        info={this.state.info}
+        isLoading={this.state.isLoading} />
+    )
+  }
+})
+
+
+module.exports = DefinitionsContainer;

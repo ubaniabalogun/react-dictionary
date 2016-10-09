@@ -1,0 +1,45 @@
+{
+  "name": "react-dictionary",
+  "version": "1.0.0",
+  "description": "Dictionary application created with React & Wordnik API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "webpack -p",
+    "start": "webpack-dev-server",
+    "deply": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ubaniabalogun/react-dictionary.git"
+  },
+  "keywords": [
+    "react",
+    "dictionary"
+  ],
+  "author": "Ubani Balogun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ubaniabalogun/react-dictionary/issues"
+  },
+  "homepage": "https://github.com/ubaniabalogun/react-dictionary",
+  "dependencies": {
+    "axios": "^0.14.0",
+    "moment": "^2.15.1",
+    "moment-range": "^2.2.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.25.0",
+    "gh-pages": "^0.11.0",
+    "html-webpack-plugin": "^2.22.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
