@@ -6,7 +6,7 @@ require('../main.css');
 function Home(props){
   return (
     <div className="content-wrapper">
-      <GetWordContainer/>
+      {/* <GetWordContainer/> */}
       <WordOfDayContainer/>
     </div>
   )

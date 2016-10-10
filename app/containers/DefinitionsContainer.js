@@ -11,13 +11,18 @@ var DefinitionsContainer = React.createClass({
     }
   },
   componentDidMount: function(){
-    var word = this.props.params.word;
+    this.makeRequest(this.props.params.word)
+  },
+  makeRequest: function(word){
     wordnikHelpers.getWordInfo(word).then(function(info){
       this.setState({
         isLoading: false,
         info: info
       })
     }.bind(this));
+  },
+  componentWillReceiveProps: function (nextProps) {
+    this.makeRequest(nextProps.routeParams.word)
   },
   render: function(){
     return(
