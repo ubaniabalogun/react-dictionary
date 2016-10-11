@@ -53,6 +53,7 @@ function getWordInfo(word){
     axios.spread(function(definitions,audio){
       meta.definitions = definitions;
       meta.audio = audio;
+      meta.audio[0] && meta.audio[0].fileUrl && (meta.audio[0].fileUrl = "https://" + meta.audio[0].fileUrl.slice(7))
       return meta
     })
   )

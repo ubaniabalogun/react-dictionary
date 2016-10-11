@@ -19,6 +19,7 @@ var DefinitionsContainer = React.createClass({
         isLoading: false,
         info: info
       })
+      console.log("DEFCON-makeRequest-info ", info);
     }.bind(this));
   },
   componentWillReceiveProps: function (nextProps) {
