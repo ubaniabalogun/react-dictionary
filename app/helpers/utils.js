@@ -2,7 +2,7 @@ var moment = require('moment');
 require('moment-range');
 
 function prepWord(word){
-  return encodeURIComponent(word.toLowerCase())
+  return encodeURIComponent(word.trim().toLowerCase())
 }
 
 function getPastXDays(number){

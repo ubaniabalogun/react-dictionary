@@ -17,7 +17,7 @@ var GetWordContainer = React.createClass({
     })
   },
   getDefinition: function(){
-    var word = this.state.word;
+    var word = this.state.word.trim();
     this.setState({
       word: ''
     });
