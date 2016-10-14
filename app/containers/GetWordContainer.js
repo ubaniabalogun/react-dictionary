@@ -13,11 +13,10 @@ var GetWordContainer = React.createClass({
   },
   handleUpdateWord: function(e){
     this.setState({
-      word: e.target.value
+      word: e.target.value.toLowerCase()
     })
   },
-  getDefinition: function(){
-    var word = this.state.word;
+  getDefinition: function(word){
     this.setState({
       word: ''
     });
@@ -27,7 +26,8 @@ var GetWordContainer = React.createClass({
   },
   handleSubmitWord: function(e){
     e.preventDefault();
-    this.getDefinition();
+    var word = this.state.word.trim();
+    this.getDefinition(word);
     document.getElementById("get-word-input").blur();
   },
   render: function(){
