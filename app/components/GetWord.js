@@ -23,19 +23,21 @@ function Input(props){
       autoCapitalize="off"
       autoCorrect="off"
       onChange={props.onUpdateWord}
+      onKeyPress={props.onEnterKey}
       value={props.word}/>
   )
 }
 
 Input.propTypes = {
   onUpdateWord: PropTypes.func.isRequired,
-  word: PropTypes.string.isRequired
+  word: PropTypes.string.isRequired,
+  onEnterKey: PropTypes.func.isRequired,
 }
 
 function GetWord(props){
   return (
     <div className="get-word-wrapper">
-      <Input onUpdateWord={props.onUpdateWord} word={props.word}/>
+      <Input onUpdateWord={props.onUpdateWord} word={props.word} onEnterKey={props.onEnterKey}/>
       <Button onSubmitWord={props.onSubmitWord}/>
     </div>
   )
@@ -45,6 +47,7 @@ GetWord.propTypes = {
   word: PropTypes.string.isRequired,
   onUpdateWord: PropTypes.func.isRequired,
   onSubmitWord: PropTypes.func.isRequired,
+  onEnterKey: PropTypes.func.isRequired,
 }
 
 

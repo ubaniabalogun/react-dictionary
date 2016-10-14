@@ -16,8 +16,7 @@ var GetWordContainer = React.createClass({
       word: e.target.value
     })
   },
-  handleSubmitWord: function(e){
-    e.preventDefault();
+  getDefinition: function(){
     var word = this.state.word;
     this.setState({
       word: ''
@@ -26,12 +25,24 @@ var GetWordContainer = React.createClass({
       pathname: "/definitions/" + word,
     })
   },
+  handleEnterKey: function(e){
+    if (e.key == 'Enter'){
+      e.preventDefault();
+      this.getDefinition();
+      e.target.blur();
+    }
+  },
+  handleSubmitWord: function(e){
+    e.preventDefault();
+    this.getDefinition();
+  },
   render: function(){
     return (
       <GetWord
         word={this.state.word}
         onUpdateWord={this.handleUpdateWord}
         onSubmitWord={this.handleSubmitWord}
+        onEnterKey={this.handleEnterKey}
         />
     )
   }
