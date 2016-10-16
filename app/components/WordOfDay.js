@@ -1,4 +1,6 @@
 var React = require('react');
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 var PropTypes = React.PropTypes;
 var Loading = require('./Loading');
 var moment = require('moment');
@@ -13,7 +15,9 @@ function WodView(props){
       <h4>WORD OF THE DAY</h4>
       <div className="underline"></div>
       <h4>{formattedDate}</h4>
-      <h2>{word}</h2>
+      <Link to={"/definitions/" + word} className="wod-link">
+        <h2>{word}</h2>
+      </Link>
       <h4>{definition}</h4>
     </div>
   )
