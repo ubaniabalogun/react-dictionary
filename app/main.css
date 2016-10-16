@@ -205,6 +205,10 @@ align-items: center;
   background-color: white;
 }
 
+.wod-link:hover {
+  color: #3c7bbe;
+}
+
 .underline {
   border-bottom: 1px solid #bcd4e2;
   display: block;
