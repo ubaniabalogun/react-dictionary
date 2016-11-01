@@ -2,6 +2,7 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var IndexLink = ReactRouter.IndexLink;
 var GetWordContainer = require('./GetWordContainer');
+var Footer = require('../components/Footer');
 require('../main.css');
 
 function Main(props){
@@ -15,6 +16,7 @@ function Main(props){
         <GetWordContainer/>
       </div>
       {props.children}
+      <Footer/>
     </div>
   )
 }
