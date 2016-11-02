@@ -22,6 +22,9 @@ var DefinitionsContainer = React.createClass({
     }.bind(this));
   },
   componentWillReceiveProps: function (nextProps) {
+    this.setState({
+      isLoading: true
+    })
     this.makeRequest(nextProps.routeParams.word)
   },
   render: function(){
